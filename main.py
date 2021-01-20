@@ -6,14 +6,15 @@ from random import randint as gen
 
 class Example(QMainWindow):
     def __init__(self):
-        super().__init__()  
+        super().__init__()
         self.initUI()
 
     def initUI(self):
-        self.setGeometry(300, 300, 200, 200)
+        self.setGeometry(300, 300, 500, 500)
         self.setWindowTitle('Рисование')
         self.pushButton = QPushButton(self)
-        self.pushButton.move(self.wigth() // 2, self.height() // 2)
+        self.pushButton.setText('Draw!')
+        self.pushButton.move(self.width() // 2, self.height() // 2)
         self.pushButton.clicked.connect(self.draw_bol)
         self.flag = False
         self.show()
